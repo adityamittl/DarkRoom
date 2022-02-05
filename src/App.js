@@ -8,7 +8,7 @@ import Music from "./assets/music.mp3";
 import { FcSpeaker } from "react-icons/fc";
 
 function App(
-  handleSingLoading
+  // handleSingLoading
 ) {
 
   // state = {
@@ -16,17 +16,17 @@ function App(
   //   isPlaying: false,
   // };
 
-  const [isPlaying, setisPlaying] = useState(false);
+  // const [isPlaying, setisPlaying] = useState(false);
 
-  let playPause = () => {
-    let isPlaying = this.state.isPlaying;
-    if (isPlaying) {
-      this.state.audio.pause();
-    } else {
-      this.state.audio.play();
-    }
-    this.setState({ isPlaying: !isPlaying });
-  };
+  // let playPause = () => {
+  //   let isPlaying = this.state.isPlaying;
+  //   if (isPlaying) {
+  //     this.state.audio.pause();
+  //   } else {
+  //     this.state.audio.play();
+  //   }
+  //   this.setState({ isPlaying: !isPlaying });
+  // };
 
 
   const [user] = useAuthState(auth);
@@ -34,9 +34,9 @@ function App(
   return (
     <div className="font-quintessential">
 
-      <button onClick={playPause} className="absolute top-6 right-6">
+      {/* <button onClick={playPause} className="absolute top-6 right-6">
         <FcSpeaker className="h-7 w-7" aria-hidden="false" />
-      </button>
+      </button> */}
 
       {user ?
         <Main />
