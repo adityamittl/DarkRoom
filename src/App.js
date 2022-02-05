@@ -5,38 +5,26 @@ import Main from "./container/Main";
 import Login from "./pages/Login";
 import Sound from "react-sound"
 import Music from "./assets/music.mp3";
-import { FcSpeaker } from "react-icons/fc";
 
-function App(
-  // handleSingLoading
-) {
+export default function App() {
 
-  // state = {
-  //   audio: new Audio(song),
-  //   isPlaying: false,
-  // };
-
-  // const [isPlaying, setisPlaying] = useState(false);
-
-  // let playPause = () => {
-  //   let isPlaying = this.state.isPlaying;
-  //   if (isPlaying) {
-  //     this.state.audio.pause();
-  //   } else {
-  //     this.state.audio.play();
-  //   }
-  //   this.setState({ isPlaying: !isPlaying });
-  // };
-
-
+  const [isPlaying, setIsPlaying] = useState(false);
   const [user] = useAuthState(auth);
 
   return (
     <div className="font-quintessential">
 
-      {/* <button onClick={playPause} className="absolute top-6 right-6">
-        <FcSpeaker className="h-7 w-7" aria-hidden="false" />
-      </button> */}
+      {/* <button onCLick={() => setIsPlaying(!isPlaying)} className="absolute top-6 right-6">{!isPlaying ? 'Play' : 'Stop' }</button>
+      <Sound
+      url={Music}
+      playStatus={isPlaying ? Sound.status.PLAYING : Sound.status.STOPPED}
+      playFromPosition={0}
+      onLoading={handleSongLoading}
+      onPlaying={handleSongPlaying}
+      onFinishedPlaying={handleSongFinishedPlaying}
+      /> */}
+
+      {/* <audio src={Music} autoPlay /> */}
 
       {user ?
         <Main />
@@ -47,5 +35,3 @@ function App(
 
   );
 }
-
-export default App;

@@ -66,6 +66,8 @@ function Details() {
   return (
     <div>{snap.current}</div>
     // baked_StandAlone == piyano     baked_Desk == desk   baked_Floor == Floor    baked_Cabinet == Cabinet    baked_Barrels==Flask    baked_FirePlace == Fireplace      baked_Wall01.002 == Window   baked_WallandPlants == Arms on the wall
+    // QR Code: https://storage.echo3d.co/morning-hill-2019/ef8b7d4c-4468-40d0-aab6-8a4ef7bf1df7.png
+    // URL: https://go.echo3d.co/S3Xc
   )
 }
 
@@ -89,7 +91,23 @@ export default function MystryRoom() {
 
       <div className="absolute top-20 right-3 z-100 bg-white px-2 py-1 rounded-lg text-3xl">
         <Details />
-      </div>      
+      </div>
+
+      <div className="group absolute w-48 top-24 left-3 z-100 text-blue-700">
+        <h1 className="bg-white px-2 py-1 rounded-lg text-xl text-center cursor-pointer">
+          View in AR
+        </h1>
+        <div className="mt-2 hover-target grid place-items-center invisible group-hover:visible bg-white rounded-lg w-96">
+          <p className="self-center mx-8 text-xl tracking-wide text-justify pt-2">To view the 3D model in AR, scan the QR code or click on the button below.</p>
+
+          <div className="grid justify-center grid-cols-1 gap-2 mx-8 md:grid-cols-2">
+            <img className="flex p-2 text-6xl rounded-xl h-40 w-40" src="https://storage.echo3d.co/morning-hill-2019/ef8b7d4c-4468-40d0-aab6-8a4ef7bf1df7.png" alt="QR Code" />
+            <a href="https://go.echo3d.co/S3Xc" target="_blank" rel="noreferrer">
+              <button className="px-8 ml-8 text-lg font-semibold tracking-wider text-white border rounded-full shadow-sm mt-16 bg-red-50 bg-gradient-to-r from-purple-400 via-purple-500 to-pink-500  hover:shadow-lg">View in AR</button>
+            </a>
+          </div>
+        </div>
+      </div>
 
     </div>
 
