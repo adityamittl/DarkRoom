@@ -64,7 +64,7 @@ export default function Navbar() {
                 ) : null}
 
                 <div className="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto" >
-                    <div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full text-xl lg:items-center items-start flex flex-col lg:h-auto space-x-2" >
+                    <div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full text-xl lg:items-center items-start flex flex-col lg:h-auto space-x-2 mr-12" >
 
                         <Link to="/">
                             <span className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer">Home</span>

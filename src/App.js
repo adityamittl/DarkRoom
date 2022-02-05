@@ -1,13 +1,15 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { auth } from './services/firebase.js'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import Main from "./container/Main";
 import Login from "./pages/Login";
-// import Sound from "react-sound"
+import Sound from "react-sound"
 import Music from "./assets/music.mp3";
 import { FcSpeaker } from "react-icons/fc";
 
-function App() {
+function App(
+  handleSingLoading
+) {
 
   // state = {
   //   audio: new Audio(song),
@@ -32,7 +34,7 @@ function App() {
   return (
     <div className="font-quintessential">
 
-      <button onClick={playPause} className="absolute top-3 right-3">
+      <button onClick={playPause} className="absolute top-6 right-6">
         <FcSpeaker className="h-7 w-7" aria-hidden="false" />
       </button>
 
