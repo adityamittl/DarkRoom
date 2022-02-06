@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
+import { HiX } from "react-icons/hi";
 import { Link } from 'react-router-dom';
 import HeroImg from '../assets/hero.svg';
 import InspirationImg from '../assets/inspiration.svg';
@@ -17,12 +17,12 @@ export default function Home() {
 
         const userValue = ref.current.value;
 
-        if (userValue == 123456) {
+        if (userValue === "A11i5W3LL") {
             setValid(true);
             setMessage("You won, here is your reward");
 
         }
-        else if (userValue != 123456) {
+        else if (userValue !== "A11i5W3LL") {
             setValid(false);
             setMessage("Wrong code, keep trying");
         }
@@ -71,9 +71,9 @@ export default function Home() {
                                                 <input placeholder="Type the code here" type="text" ref={ref} onChange={getInputValue} className="block w-full pb-2 text-lg text-gray-200 placeholder-gray-400 bg-transparent border-b-2 border-gray-400 appearance-none rounded-xl focus:border-green-400 focus:outline-none text-center" />
                                                 <div className='text-center'>
                                                     {message && <div>
-                                                        <p className={valid ? "text-green-500 " : "text-red-500"} >{message}</p>
-                                                        <a href="https://c.tenor.com/VFFJ8Ei3C2IAAAAM/rickroll-rick.gif" target="_blank" className={valid ? "block" : "hidden"} >
-                                                            <button className='bg-blue-600 text-white py-2 px-8 rounded-md ml-2'>
+                                                        <p className={valid ? "text-green-500 " : "text-red-400"} >{message}</p>
+                                                        <a href="https://c.tenor.com/rtnshG9YFykAAAAM/rick-astley-rick-roll.gif" target="_blank" className={valid ? "block" : "hidden"} >
+                                                            <button className='bg-blue-600 my-2 text-white py-2 px-8 rounded-md ml-2'>
                                                                 Claim reward
                                                             </button>
                                                         </a>

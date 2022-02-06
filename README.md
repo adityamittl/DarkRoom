@@ -2,6 +2,9 @@
 
 ## 💡 Inspiration
 
+Do you lov puzzles or treasure hunts? or pharaohs you are a big fan of Jizsaw and Escap Room? We have something fro you!
+Due to COVID'19 we are not able to go out due to some restrictions and we want to play games which are fun and let you explore it. Therefore we have created a game called DarkRoom. Here you can enter into the world of 3D puzzles and try to solve them by finding out the objects present there.
+
 ## 💻 What it does
 
 DarkRoom is a web application that allows you to enter into the 3D world of the game Escape Room. Here users need to enter the room and see the 3D world of the game. The user can also interact with the 3D world and need to find the exit with the correct combination of the keys provided by the game by decoding the riddles. The app has tons of easter eggs and fun features. Unlock the secret parts of the game by solving the riddles and finding the exit and coming at the top of the leaderboard.
@@ -30,8 +33,28 @@ Any domain name with .tech, eg longitude. tech. We will choose the best domain n
 
 ## 🧠 Challenges we ran into
 
+- Completing the whole project in the given time frame.
+- Rendering the 3D model.
+- Creating the score feature.
+- Adding the easter eggs.
+- Creating the leaderboard.
+
 ## 🏅 Accomplishments that we're proud of
+
+- Completing all the features in the given time frame.
+- Building the game from scratch.
+- Adding Augmented Reality.
 
 ## 📖 What we learned
 
+- Collaboration with the team.
+- Using Redux for state management.
+- Using Firebase for authentication.
+- Rendering 3D models with the help of Three.js.
+- Building an Augmented Reality experience.
+
 ## 🚀 What's next for DarkRoom
+
+- Adding more house/escape room puzzles.
+- Adding real-time multiplayer.
+- Adding more games.

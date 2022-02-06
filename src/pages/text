@@ -79,18 +79,18 @@ export default function MystryRoom() {
   const [counter, setCounter] = useState(0);
 
   const ref = useRef(null);
-  const refDesk = useRef(null);
+  const refTable = useRef(null);
 
   const [message, setMessage] = useState("");
-  const [messageDesk, setMessageDesk] = useState("");
+  const [messageTable, setMessageTable] = useState("");
 
   const [valid, setValid] = useState(false);
-  const [validDesk, setValidDesk] = useState(false);
+  const [validTable, setValidTable] = useState(false);
 
   const getInputValue = (e) => {
     e.preventDefault();
     const userValue = ref.current.value;
-    if (userValue === "Globe") {
+    if (userValue === "Floor") {
       setValid(true);
       setMessage("You got the right answer!");
       setCounter(counter + 10);
@@ -101,17 +101,17 @@ export default function MystryRoom() {
     }
   }
 
-  const getInputValueDesk = (e) => {
+  const getInputValueTable = (e) => {
     e.preventDefault();
-    const userValueDesk = refDesk.current.value;
-    if (userValueDesk === "Desk") {
-      setValidDesk(true);
-      setMessageDesk("You got the right answer!");
-      setCounter(counter + 10);
+    const userValueTable = ref.current.value;
+    if (userValueTable === "Table") {
+      setValidTable(true);
+      setMessageTable("You got the right answer!");
+      // setCounter(counter + 20);
     }
     else {
-      setValidDesk(false);
-      setMessageDesk("Wrong answer! Try again!");
+      setValidTable(false);
+      setMessageTable("Wrong answer! Try again!");
     }
   }
 
@@ -134,7 +134,7 @@ export default function MystryRoom() {
 
       <div className="absolute top-24 right-3 bg-white px-2 py-1 rounded-lg text-xl text-center cursor-pointer" onClick={() => setShowCode(true)}>
         {/* <Details /> */}
-        Give answers
+        Show Clues
       </div>
 
       {showCode ? (
@@ -143,8 +143,8 @@ export default function MystryRoom() {
             <div className="relative my-6 w-128">
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full dark:bg-gray-800 bg-secondary outline-none focus:outline-none">
                 <div className="flex items-start justify-between p-5 border-solid rounded-t">
-                  <div className="text-3xl font-base tracking-wide">
-                    Give answers
+                  <div className="text-3xl font-base tracking-wide cursor-pointer">
+                    Riddles
                   </div>
 
                   <button className="absolute right-6" onClick={() => setShowCode(false)} aria-label="button">
@@ -165,44 +165,24 @@ export default function MystryRoom() {
                   <div className="grid place-items-center text-xl py-2 gap-2 mx-2 w-full mb-4">
 
                     <div className="mt-4 outline-transparent outline flex flex-row place-items-center mx-12">
-                      <p className="">I show all the world, I show the oceans, I show each sea, Who am I?</p>
-                      <input ref={ref} onChange={getInputValue} placeholder="Type the code here" type="text" className="block w-56 pb-2 text-lg text-gray-200 placeholder-gray-400 bg-transparent border-b-2 border-gray-400 appearance-none rounded-xl focus:border-green-400 focus:outline-none text-center" />
-                    </div>
-                    <div className='text-left'>
-                      {message && <div>
-                        <p className={valid ? "text-green-500 " : "text-red-400"} >{message}</p>
-                      </div>}
-                    </div>
-
-                    <div className="mt-4 outline-transparent outline flex flex-row place-items-center mx-12">
-                      <p className="">Skip to the place of work, Touch nothing but look near, On the surface I do lurk, Find me right on here</p>
-                      <input ref={refDesk} onChange={getInputValueDesk} placeholder="Type the code here" type="text" className="block w-56 pb-2 text-lg text-gray-200 placeholder-gray-400 bg-transparent border-b-2 border-gray-400 appearance-none rounded-xl focus:border-green-400 focus:outline-none text-center" />
-                    </div>
-                    <div className='text-center'>
-                      {messageDesk && <div>
-                        <p className={validDesk ? "text-green-500 " : "text-red-400"} >{messageDesk}</p>
-                      </div>}
+                      <p className="">Floor</p>
+                      <input ref={ref} onChange={getInputValue} placeholder="Type the code here" type="text" className="block w-full pb-2 text-lg text-gray-200 placeholder-gray-400 bg-transparent border-b-2 border-gray-400 appearance-none rounded-xl focus:border-green-400 focus:outline-none text-center" />
+                      <div className='text-center'>
+                        {message && <div>
+                          <p className={valid ? "text-green-500 " : "text-red-400"} >{message}</p>
+                        </div>}
+                      </div>
                     </div>
 
                     <div className="mt-4 outline-transparent outline flex flex-row place-items-center mx-12">
-                      <p className="">It is all in black and white, I move with sound and might, The key is sing on sight, The prize here does alight</p>
-                      <input placeholder="Type the code here" type="text" className="block w-56 pb-2 text-lg text-gray-200 placeholder-gray-400 bg-transparent border-b-2 border-gray-400 appearance-none rounded-xl focus:border-green-400 focus:outline-none text-center" />
+                      <p className="">Table</p>
+                      <input ref={refTable} onChange={getInputValueTable} placeholder="Type the code here" type="text" className="block w-full pb-2 text-lg text-gray-200 placeholder-gray-400 bg-transparent border-b-2 border-gray-400 appearance-none rounded-xl focus:border-green-400 focus:outline-none text-center" />
+                      <div className='text-center'>
+                        {messageTable && <div>
+                          <p className={validTable ? "text-green-500 " : "text-red-400"} >{messageTable}</p>
+                        </div>}
+                      </div>
                     </div>
-                    {/* <div className='text-center'>
-                      {messageDesk && <div>
-                        <p className={validDesk ? "text-green-500 " : "text-red-400"} >{messageDesk}</p>
-                      </div>}
-                    </div> */}
-
-                    <div className="mt-4 outline-transparent outline flex flex-row place-items-center mx-12">
-                      <p className="">Go through the place, That hosts the chairs. The prize is hidden, On the…?????</p>
-                      <input placeholder="Type the code here" type="text" className="block w-56 pb-2 text-lg text-gray-200 placeholder-gray-400 bg-transparent border-b-2 border-gray-400 appearance-none rounded-xl focus:border-green-400 focus:outline-none text-center" />
-                    </div>
-                    {/* <div className='text-center'>
-                      {messageDesk && <div>
-                        <p className={validDesk ? "text-green-500 " : "text-red-400"} >{messageDesk}</p>
-                      </div>}
-                    </div> */}
 
 
                   </div>
