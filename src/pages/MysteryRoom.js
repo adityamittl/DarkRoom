@@ -120,7 +120,7 @@ export default function MystryRoom() {
 
       <div className="w-full h-screen outline-none cursor-grab lg:block">
         {/* <Canvas shadows dpr={[1, 2]} camera={{ position: [10, 6, 3], fov: 50 }}> */}
-        {/* <Canvas shadows dpr={[1, 2]} camera={{ position: [6, 6, 6], fov: 50 }}>
+        <Canvas shadows dpr={[1, 2]} camera={{ position: [6, 6, 6], fov: 50 }}>
           <ambientLight intensity={0.7} />
           <spotLight intensity={0.5} angle={0.1} penumbra={1} position={[10, 15, 10]} castShadow />
           <Suspense fallback={null}>
@@ -129,7 +129,7 @@ export default function MystryRoom() {
             <ContactShadows rotation-x={Math.PI / 2} position={[0, -0.8, 0]} opacity={0.25} width={10} height={10} blur={1.5} far={0.8} />
           </Suspense>
           <OrbitControls />
-        </Canvas> */}
+        </Canvas>
       </div>
 
       <div className="absolute top-24 right-3 bg-white px-2 py-1 rounded-lg text-xl text-center cursor-pointer" onClick={() => setShowCode(true)}>

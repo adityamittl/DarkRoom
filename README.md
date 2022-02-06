@@ -2,8 +2,8 @@
 
 ## 💡 Inspiration
 
-Do you lov puzzles or treasure hunts? or pharaohs you are a big fan of Jizsaw and Escap Room? We have something fro you!
-Due to COVID'19 we are not able to go out due to some restrictions and we want to play games which are fun and let you explore it. Therefore we have created a game called DarkRoom. Here you can enter into the world of 3D puzzles and try to solve them by finding out the objects present there.
+Do you love puzzles or treasure hunts? or pharaohs you are a big fan of Jigsaw and Escape Room movies? We have something for you!
+Due to COVID'19, we are not able to go out due to some restrictions and we want to play games that are fun and let you explore them. Therefore we have created a game called DarkRoom. Here you can enter into the world of 3D puzzles and try to solve them by finding out the objects present there.
 
 ## 💻 What it does
 
@@ -36,7 +36,7 @@ Any domain name with .tech, eg longitude. tech. We will choose the best domain n
 - Completing the whole project in the given time frame.
 - Rendering the 3D model.
 - Creating the score feature.
-- Adding the easter eggs.
+- Adding the Easter eggs.
 - Creating the leaderboard.
 
 ## 🏅 Accomplishments that we're proud of
